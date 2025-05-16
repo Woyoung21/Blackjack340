@@ -22,8 +22,10 @@ void Deck::clearDeck() {
 }
 
 void Deck::fill() { //populates a linkedlist with 52 cards
-    std::vector<std::string> values = {"Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"};
-    std::vector<int> scores = {11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10};
+    
+    //originally stored in vectors, changed to arrays to save memory
+    std::string values[] = {"Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"};
+    int scores[] = {11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10};
 
     //Aces have value 11
     for (unsigned int i = 0; i < 13; ++i) {
